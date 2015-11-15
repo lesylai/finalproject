@@ -8,22 +8,21 @@ Expand on the readme questions below to provide an overview of the goals, backgr
 
 ## Introduction
 
-This is a final project for the [Interacting with Data](https://github.com/Brown-BIOL2430-S04-Fall2015/syllabus) seminar in fall 2015. This project (a very brief, ie 1-2 sentence, overview of the project)...
+This is a final project for the [Interacting with Data](https://github.com/Brown-BIOL2430-S04-Fall2015/syllabus) seminar in fall 2015. This project will create an interactive visualization that teaches viewers about color cognition. The visualization will illustrate pilot results from my research on the colors modified from the Berkeley Color Project. 
 
-To view this project, ... (embed visualization here or provide instructions on how to view the project).
+To view this project, Under construction... (embed visualization here or provide instructions on how to view the project).
 
 ## The data
 
-Description of data...
-
-- Data source (simulated/ published/ unpublished?)
-- Data structure - what are the variables? How are they organized? What states can they have
+Description of data:
+These are pilot data from the experiment. 
+Emotion ratings, color appearance ratings for colors (modified from Berkeley Color Project). Ratings are averaged across two repetitions in the experiment and across subjects. 
 
 ## Background
 
-Examples of previous visualizations of similar data or processes, if any exist... Include links or add images to markdown document... how were data mapped to aesthetics in these previous approaches? Was there filtering?
+[documentation] (http://www.pnas.org/content/107/19/8877/F1.expansion.html)
 
-Shortcomings of previous approaches, or potentially interesting gaps between previous approaches...
+There has been on going research investigating various aspects of color cognition using the colors modified from the Berkeley Color Project. Findings regarding this colorset however were published in separate papers. Even within the same paper, different results were presented in separated figures. This leads to a somewhat non-intuitive presentation of the findings given that color cognition involves a rich network of associations that viewers experience on the spot. In this project, I want to make a visualization presents various findings in ways that mimic the experience of color cognition in real life. 
 
 ## This project
 
