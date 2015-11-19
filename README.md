@@ -13,22 +13,23 @@ This is a final project for the [Interacting with Data](https://github.com/Brown
 To view this project, Under construction... (embed visualization here or provide instructions on how to view the project).
 
 ## The data
+Color cognition experiment results presented as color coordinates in CIE xyY space.  
 
-Description of data:
-These are pilot data from the experiment. 
-Emotion ratings, color appearance ratings for colors (modified from Berkeley Color Project). Ratings are averaged across two repetitions in the experiment and across subjects. 
 
 ## Background
 
-[documentation] (http://www.pnas.org/content/107/19/8877/F1.expansion.html)
+In the world of digital monitors, colors are made of numerical values that represent a color's relative location in the color space. Human color perception is described as changes in the three axises as follows: hue, lightness and chroma. Unlike color naming, properties of the perceived colors vary along these three axises in a non-discrete manner. However, people often think of colors as categorical variables (e.g. blue is sad and yellow is happy). This can be misleading as research on color associations (e.g. emotion, semantics) found that hue has relatively little influence on viewers' color cognition. The goad of this project is to visualize research findings on color perception in ways that encourage viewers to perceive colors as a continuous variable moving along the three critical axises. 
 
-There has been on going research investigating various aspects of color cognition using the colors modified from the Berkeley Color Project. Findings regarding this colorset however were published in separate papers. Even within the same paper, different results were presented in separated figures. This leads to a somewhat non-intuitive presentation of the findings given that color cognition involves a rich network of associations that viewers experience on the spot. In this project, I want to make a visualization presents various findings in ways that mimic the experience of color cognition in real life. 
+[documentation] (http://www.pnas.org/content/107/19/8877/F1.expansion.html)
 
 ## This project
 
+
+
 ### Mapping of data to aesthetics
 
-How will aesthetic attributes ( X / Y / color / shape / size /texture / etc ) will be mapped to the data?
+How will aesthetic attributes ( X / Y / color / shape / size /texture / etc ) will be mapped to the data? 
+The colors are not only aesthetic attributes but also data itself. I hope mapping numbers directly onto the percepts of colors can give viewers some intuition about the continuity in colors rather than discrete categories. 
 
 ### Filtering
 
@@ -43,6 +44,8 @@ Are any data mapped to more than one aesthetic attribute? Why?
 ### Motion
 
 If motion is used, what purpose does it serve ( metaphor (eg representing motion in real world) / transition continuity between views / etc )
+
+The transition of the background colors signifies the characteristics of color space. Although it would be ideal if the change in distance in color space is not proportional to the scale of the slider, so to reflect the actual nonlinearity of the color space. 
 
 ### Perspective
 
