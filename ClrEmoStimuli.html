@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ColorStimulus</title>
+    <script type="text/javascript" src="d3.min.js"></script>
+    <script src="d3-colorwheel.js"></script>
+
+    <style>  
+    svg {  
+        font-family: "Helvetica", Arial, sans-serif;
+        font-weight: 100;
+    }
+    .arc path {
+       stroke: gray;
+    }
+    .arc text {
+        font-size: 120%;
+        fill: #aaa;
+    }
+
+    </style>
+
+    
+    <style>
+        body   { background: white; }
+        svg { background-color: gray;}
+    </style>
+
+
+
+</head>
+
+<body>
+<div id=section>
+    The experimental stimuli include the following colors. Six different hues were presented in two lightness-levels and two saturation levels (i.e. colorfulness). 
+</div>
+
+<div id=section>
+    <p id="colour-wheels"></p>
+
+    <script src="color-wheels.js"></script> 
+</div>
+
+
+
+</body>
+</html>

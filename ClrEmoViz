@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ColorEmotion</title>
+	
+	<script src="d3.min.js"></script>
+	
+	<style>
+	body   { background: #261822; }
+	svg    { background-color: #261822; }
+	
+	</style>
+
+</head>
+
+<body>
+
+<div>
+    <h1 style="color:white; font-family: arial">Is Blue happier than Yellow?</h1>
+    <p1 style="color:white; font-family: arial; font-size: 18px">This visualization illustrates how happy versus sad people feel about different colors. Click on the Happy/Sad buttons to find out the moods of colors!</p>
+    <a href="file:///Users/leslielai/Desktop/DataCourse/project-folder/ClrEmoStimuli.html">See stimuli here</a>
+</div>
+
+
+<div>
+<button id="HP1" style = "margin-left: 5px; margin-top: 100px; font-size:16px; color: white; background: #261822">Very Sad</button>
+<button id="HP2" style = "margin-left: 5px; margin-top: 100px; font-size:16px; color: white; background: #261822">Sad</button>
+<button id="HP3" style = "margin-left: 5px; margin-top: 100px; font-size:16px; color: white; background: #261822">Neutral</button>
+<button id="HP4" style = "margin-left: 5px; margin-top: 100px; font-size:16px; color: white; background: #261822">Happy</button>
+<button id="HP5" style = "margin-left: 5px; margin-top: 100px; font-size:16px; color: white; background: #261822">Very happy</button>
+
+
+</div>
+
+<div>
+<script>
+
+//Make an SVG Container
+ var svgContainer = d3.select("body").append("svg")
+                                     .attr("width", 500)
+                                     .attr("height", 600);
+ 
+ //Draw the Ellipse
+ var ellipseA1 = svgContainer.append("ellipse")
+                         .attr("cx", 150)
+                         .attr("cy", 150)
+                         .attr("rx", 125)
+                         .attr("ry", 70)
+                         .style("fill", "none")
+                         .style("stroke", "white"); 
+ var ellipseA2 = svgContainer.append("ellipse")
+                         .attr("cx", 150)
+                         .attr("cy", 150)
+                         .attr("rx", 75)
+                         .attr("ry", 35)
+                         .style("fill", "none")
+                         .style("stroke", "white"); 
+ 
+ var ellipseB = svgContainer.append("ellipse")
+                         .attr("cx", 150)
+                         .attr("cy", 350)
+                         .attr("rx", 125)
+                         .attr("ry", 70)
+                         .style("fill", "none")
+                         .style("stroke", "white");
+
+ var ellipseB2 = svgContainer.append("ellipse")
+                         .attr("cx", 150)
+                         .attr("cy", 350)
+                         .attr("rx", 75)
+                         .attr("ry", 35)
+                         .style("fill", "none")
+                         .style("stroke", "white");
+
+  // make axis 
+  var yLine = svgContainer.append("line")
+                         .attr("x1", 280)
+                         .attr("y1", 70)
+                         .attr("x2", 280)
+                         .attr("y2", 450)
+                         .style("stroke", "white")
+                         .style("stroke-width","2px");
+  var yText = svgContainer.append("text")
+                         .attr("x", 0)
+                         .attr("y", 0)
+                         .text("Light")
+                         .attr("font-size", "20px")
+                         .attr("font-family","arial")
+                         .attr("fill","white")
+                         .attr("transform", "translate(290,70) rotate(90)")
+
+
+
+
+ var yText2 = svgContainer.append("text")
+                         .attr("x", 0)
+                         .attr("y", 0)
+                         .text("Dark")
+                         .attr("font-size", "20px")
+                         .attr("font-family","arial")
+                         .attr("fill","white")
+                         .attr("transform", "translate(290,400) rotate(90)")
+
+  var xLine = svgContainer.append("line")
+                         .attr("x1", 30)
+                         .attr("y1", 450)
+                         .attr("x2", 280)
+                         .attr("y2", 250)
+                         .style("stroke", "white")
+                         .style("stroke-width","2px");
+  var xText1 = svgContainer.append("text")
+                         .attr("x", 0)
+                         .attr("y", 0)
+                         .text("High")
+                         .attr("font-size", "16px")
+                         .attr("font-family","arial")
+                         .attr("fill","white")
+                         .attr("transform", "translate(248,270) rotate(-43)")
+  var xText2 = svgContainer.append("text")
+                         .attr("x", 0)
+                         .attr("y", 0)
+                         .text("High")
+                         .attr("font-size", "16px")
+                         .attr("font-family","arial")
+                         .attr("fill","white")
+                         .attr("transform", "translate(30,440) rotate(-43)")
+  var xText2 = svgContainer.append("text")
+                         .attr("x", 0)
+                         .attr("y", 0)
+                         .text("Saturation")
+                         .attr("font-size", "20px")
+                         .attr("font-family","arial")
+                         .attr("fill","white")
+                         .attr("transform", "translate(20,490) rotate(-40)")
+                         
+
+
+
+  // Make color circles: Light-HS 
+  var ClrCircles = [
+   { "x_axis": 150, "y_axis": 80, "radius": 12, "color" : "#ff0900", "id": "H5"},
+   { "x_axis": 45, "y_axis": 110, "radius": 12, "color" : "#fff600", "id": "H4"},
+   { "x_axis": 60, "y_axis": 195, "radius": 12, "color" : "#16ff05", "id": "H4"},
+   { "x_axis": 170, "y_axis": 220, "radius": 12, "color" : "#00ffbf", "id": "H5"},
+   { "x_axis": 265, "y_axis": 180, "radius": 12, "color" : "#0009ff", "id": "H5"},
+   { "x_axis": 250, "y_axis": 110, "radius": 12, "color" : "#c500ff", "id": "H5"},
+   
+   { "x_axis": 150, "y_axis": 115, "radius": 12, "color" :"#ffa09f", "id":"H4"},
+   { "x_axis": 90, "y_axis": 130, "radius": 12, "color" : "#fff8a5", "id":"H3"},
+   { "x_axis": 90, "y_axis": 170, "radius": 12, "color" : "#9effc9", "id":"H3"},
+   { "x_axis": 160, "y_axis": 185, "radius": 12, "color" : "#92fff2", "id":"H3"},
+   { "x_axis": 215, "y_axis": 170, "radius": 12, "color" : "#92aaff", "id":"H4"},
+   { "x_axis": 210, "y_axis": 130, "radius": 12, "color" : "#d598ff", "id":"H4"},
+
+   { "x_axis": 150, "y_axis": 280, "radius": 12, "color" : "#800500", "id":"H2"},
+   { "x_axis": 45, "y_axis": 310, "radius": 12, "color" : "807600","id":"H2"},
+   { "x_axis": 60, "y_axis": 395, "radius": 12, "color" : "#0b8002","id":"H2"},
+   { "x_axis": 170, "y_axis": 420, "radius": 12, "color" : "#008064","id":"H3"},
+   { "x_axis": 265, "y_axis": 380, "radius": 12, "color" : "#000480","id":"H3"},
+   { "x_axis": 250, "y_axis": 310, "radius": 12, "color" : "630080","id":"H2"},
+   
+   { "x_axis": 150, "y_axis": 315, "radius": 12, "color" :"#805050","id":"H1"},
+   { "x_axis": 90, "y_axis": 330, "radius": 12, "color" : "#807d4b","id":"H1"},
+   { "x_axis": 90, "y_axis": 370, "radius": 12, "color" : "#49805b","id":"H1"},
+   { "x_axis": 160, "y_axis": 385, "radius": 12, "color" : "#3e806e","id":"H1"},
+   { "x_axis": 215, "y_axis": 370, "radius": 12, "color" : "#495580","id":"H1"},
+   { "x_axis": 210, "y_axis": 330, "radius": 12, "color" : "#6a4780","id":"H1"}
+
+   ];
+ 
+ 
+   var circles = svgContainer.selectAll("circle") // circle 
+                          .data(ClrCircles)
+                          .enter()
+                          .append("circle");
+
+   var circleAttributes = circles
+                       .attr("cx", function (d) { return d.x_axis; })
+                       .attr("cy", function (d) { return d.y_axis; })
+                       .attr("r", function (d) { return d.radius; })
+                       .attr("id", function (d) { return d.id;})                                      
+                       .style("fill", function(d) { return d.color; });
+
+
+ d3.select("#HP5").on("click", function() {
+   
+    var H5 = d3.selectAll("#H5")
+   			.transition()
+   			.attr("r", 20)
+   			.duration(800)
+   			.each("end", function () {
+   				d3.select(this)
+   					.transition()
+   					.duration(800)
+   					.attr("r", 12);
+   		})
+   	})
+
+
+d3.select("#HP4").on("click", function() {
+   	var H4 = d3.selectAll("#H4")
+   			.transition()
+   			.attr("r", 20)
+   			.duration(800)
+   			.each("end", function () {
+   				d3.select(this)
+   					.transition()
+   					.duration(800)
+   					.attr("r", 12);
+   		})
+   	})
+
+
+d3.select("#HP3").on("click", function() {
+   	var H3 = d3.selectAll("#H3")
+   			.transition()
+   			.attr("r", 20)
+   			.duration(1000)
+   			.each("end", function () {
+   				d3.select(this)
+   					.transition()
+   					.duration(1000)
+   					.attr("r", 12);
+   		})
+   	})
+
+d3.select("#HP2").on("click", function() {
+   	var H2 = d3.selectAll("#H2")
+   			.transition()
+   			.attr("r", 20)
+   			.duration(1000)
+   			.each("end", function () {
+   				d3.select(this)
+   					.transition()
+   					.duration(1000)
+   					.attr("r", 12);
+   		})
+   	})
+
+d3.select("#HP1").on("click", function() {
+   	var H1 = d3.selectAll("#H1")
+   			.transition()
+   			.attr("r", 20)
+   			.duration(1000)
+   			.each("end", function () {
+   				d3.select(this)
+   					.transition()
+   					.duration(1000)
+   					.attr("r", 12);
+   		})
+   	})
+
+
+
+</script>
+
+</div>
+
+<div>
+<button onclick="myFunction()">More Info</button>
+
+<script>
+function myFunction() {
+    alert("Our findings suggest that color-emotion associations rely primarily on how bright vs. dark and how saturated vs. de-saturated a color is, instead of hue. In fact, people actually perceive bluer colors as happier than yellower colors. Click on the buttons to explore more: can you see the effects of lightness and saturation on color emotions?");
+}
+</script>
+</div>
+
+</body>
+<html>
