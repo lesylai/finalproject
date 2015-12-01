@@ -8,23 +8,22 @@ Expand on the readme questions below to provide an overview of the goals, backgr
 
 ## Introduction
 
-This is a final project for the [Interacting with Data](https://github.com/Brown-BIOL2430-S04-Fall2015/syllabus) seminar in fall 2015. This project will create an interactive visualization that teaches viewers about color cognition. The visualization will illustrate pilot results from my research on the colors modified from the Berkeley Color Project. 
+This is a final project for the [Interacting with Data](https://github.com/Brown-BIOL2430-S04-Fall2015/syllabus) seminar in fall 2015. This project includes an interactive visualization that illustrates research findings about color-emotion associations. 
 
-To view this project, Under construction... (embed visualization here or provide instructions on how to view the project).
+You can access the code [here](https://github.com/lesylai/finalproject.git)
 
 ## The data
-Color cognition experiment results presented as color coordinates in CIE xyY space.  
+Pilot data from behavioral experiment. Human behavioral data are re-interpreted and represented as color-coordinates. 
 
 
 ## Background
 
-In the world of digital monitors, colors are made of numerical values that represent a color's relative location in the color space. Human color perception is described as changes in the three axises as follows: hue, lightness and chroma. Unlike color naming, properties of the perceived colors vary along these three axises in a non-discrete manner. However, people often think of colors as categorical variables (e.g. blue is sad and yellow is happy). This can be misleading as research on color associations (e.g. emotion, semantics) found that hue has relatively little influence on viewers' color cognition. The goad of this project is to visualize research findings on color perception in ways that encourage viewers to perceive colors as a continuous variable moving along the three critical axises. 
+In the world of digital monitors, colors are made of numerical values that represent a color's relative location in the color space. Human color perception is described as changes in the three axises as follows: hue, lightness and chroma. Unlike color naming, properties of the perceived colors vary along these three axises in a non-discrete manner. However, people often think of colors as [categorical variables](http://www.pnas.org/content/107/19/8877/F1.expansion.html)(e.g. blue is sad and yellow is happy). 
 
-[documentation] (http://www.pnas.org/content/107/19/8877/F1.expansion.html)
+This can be misleading as research on color associations (e.g. emotion, semantics) found that hue has relatively little influence on viewers' color cognition. The goal of this project is to visualize research findings on color perception in ways that encourage viewers to perceive colors as a continuous variable moving along the three critical axises. To do so, I re-interpreted behavioral data (e.g. ratings)by means of the stimulus itself i.e. color, and map the results directly onto colors with respect to saturation, lightness and hue. 
+
 
 ## This project
-
-
 
 ### Mapping of data to aesthetics
 
@@ -34,29 +33,33 @@ The colors are not only aesthetic attributes but also data itself. I hope mappin
 ### Filtering
 
 Are data filtered? ie in some views are some data not mapped to particular attributes of the image? What is the goal of the filtering?
-
-### Extra ink
-
-Are there aesthetic attributes that are not mapped to the data? If so, what purpose do they serve ( redundancy for robustness / improve visual metaphor / but data in context / beauty / etc )?
-
-Are any data mapped to more than one aesthetic attribute? Why?
+For this project, data are filtered (translated) into viusal representations such that the actual data (i.e. emotional ratings) were embedded in the visual features (colors) completely. This approach serves the following objectives: (1) allowing viewers have online validation of the findings while interacting (viewing) with the data (colors) and (2) revealing the main findings of the study by navigating viewers through the colors placed in the designated color space. 
 
 ### Motion
 
 If motion is used, what purpose does it serve ( metaphor (eg representing motion in real world) / transition continuity between views / etc )
 
-The transition of the background colors signifies the characteristics of color space. Although it would be ideal if the change in distance in color space is not proportional to the scale of the slider, so to reflect the actual nonlinearity of the color space. 
+Motion (size transition) is used to signal the elements that correspond to the selected "mood" within the color space. The size-change induces a smooth pop-out effect that allows simutaneous perceptual grouping of the elements. Perceptual grouping further diminishes the differences among hues, which corresponds nicely with the emotion data (that is, hue has little effect on people's emotional ratings on colors'). 
 
 ### Perspective
 
 To what extent is perspective (eg mappings) controlled by users vs hard coded in advance? How does this project aid in exploration vs exposition?
 
+The perspective (e.g. mapping) in this project is essentially hard coded (i.e. which moods map onto which colors). However, the hope is that through interacting with the visualization, viewers will be able to explore colors in various dimensions by the means of mapping them onto data (e.g. emotion ratings).   
+
 ## Assessment
 
 Was the new visualization successful at providing insight that was not possible or more difficult with previous approaches?
+The standard approach to visualze experimental data in the field is to plot data (e.g. ratings, color appearance, etc.) as a function of hue. While this approach is consistent with standard scientific data-plotting, it has  a strong bias toward hue based approach to color perception.  
+
+Given that color is the agent of the experimental stimulus, the visualization presented here translates and displays behavioral data directly in the context of colors. Further, the visualization recreates a "customized" color space that illustrates the main resutls of the study. This approach provides more intuitive access to the behavioral data and allow viewers to evaluate our study results online because they are viewing the colors simutaneously. 
 
 What are the main limitations of new approach?
 
+The new approach is probably hard to be generalized to other data visualziation as it requires direct link between visual features and the data agents. 
+
 What are future directions this could go in?
+
+For the purpose of visualizing color-cognition research, this new approach may have exciting applications that can make color research more accessible for public. For example, displaying what we learn from color science in physical space (see Museum of Emotion, NYC)  
 
 
