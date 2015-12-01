@@ -13,7 +13,7 @@ This is a final project for the [Interacting with Data](https://github.com/Brown
 You can access the code [here](https://github.com/lesylai/finalproject.git)
 
 ## The data
-Pilot data from behavioral experiment. Human behavioral data are re-interpreted and represented as color-coordinates. 
+Pilot data from behavioral experiment. Behavioral data are re-interpreted and represented as color-coordinates. 
 
 
 ## Background
@@ -27,39 +27,30 @@ This can be misleading as research on color associations (e.g. emotion, semantic
 
 ### Mapping of data to aesthetics
 
-How will aesthetic attributes ( X / Y / color / shape / size /texture / etc ) will be mapped to the data? 
-The colors are not only aesthetic attributes but also data itself. I hope mapping numbers directly onto the percepts of colors can give viewers some intuition about the continuity in colors rather than discrete categories. 
+The colors are not only aesthetic attributes for this project, but also data themselves. I hope mapping numbers directly onto the percepts of colors can give viewers some intuition about the continuity in colors rather than discrete categories. 
 
 ### Filtering
 
-Are data filtered? ie in some views are some data not mapped to particular attributes of the image? What is the goal of the filtering?
 For this project, data are filtered (translated) into viusal representations such that the actual data (i.e. emotional ratings) were embedded in the visual features (colors) completely. This approach serves the following objectives: (1) allowing viewers have online validation of the findings while interacting (viewing) with the data (colors) and (2) revealing the main findings of the study by navigating viewers through the colors placed in the designated color space. 
 
 ### Motion
-
-If motion is used, what purpose does it serve ( metaphor (eg representing motion in real world) / transition continuity between views / etc )
 
 Motion (size transition) is used to signal the elements that correspond to the selected "mood" within the color space. The size-change induces a smooth pop-out effect that allows simutaneous perceptual grouping of the elements. Perceptual grouping further diminishes the differences among hues, which corresponds nicely with the emotion data (that is, hue has little effect on people's emotional ratings on colors'). 
 
 ### Perspective
 
-To what extent is perspective (eg mappings) controlled by users vs hard coded in advance? How does this project aid in exploration vs exposition?
-
 The perspective (e.g. mapping) in this project is essentially hard coded (i.e. which moods map onto which colors). However, the hope is that through interacting with the visualization, viewers will be able to explore colors in various dimensions by the means of mapping them onto data (e.g. emotion ratings).   
 
 ## Assessment
 
-Was the new visualization successful at providing insight that was not possible or more difficult with previous approaches?
 The standard approach to visualze experimental data in the field is to plot data (e.g. ratings, color appearance, etc.) as a function of hue. While this approach is consistent with standard scientific data-plotting, it has  a strong bias toward hue based approach to color perception.  
 
 Given that color is the agent of the experimental stimulus, the visualization presented here translates and displays behavioral data directly in the context of colors. Further, the visualization recreates a "customized" color space that illustrates the main resutls of the study. This approach provides more intuitive access to the behavioral data and allow viewers to evaluate our study results online because they are viewing the colors simutaneously. 
 
-What are the main limitations of new approach?
-
+Limitations: 
 The new approach is probably hard to be generalized to other data visualziation as it requires direct link between visual features and the data agents. 
 
-What are future directions this could go in?
-
-For the purpose of visualizing color-cognition research, this new approach may have exciting applications that can make color research more accessible for public. For example, displaying what we learn from color science in physical space (see Museum of Emotion, NYC)  
+Furture Directions: 
+For the purpose of visualizing color-cognition research, this new approach may have exciting applications that can make color research more accessible for public. For example, displaying what we learn from color science in physical space (see [Museum of Feelings] (https://www.themuseumoffeelings.com/))  
 
 
