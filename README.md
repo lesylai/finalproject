@@ -51,6 +51,6 @@ Limitations:
 The new approach is probably hard to be generalized to other data visualziation as it requires direct link between visual features and the data agents. 
 
 Furture Directions: 
-For the purpose of visualizing color-cognition research, this new approach may have exciting applications that can make color research more accessible for public. For example, displaying what we learn from color science in physical space (see [Museum of Feelings] (https://www.themuseumoffeelings.com/))  
+For the purpose of visualizing color-cognition research, this new approach may have exciting applications that can make color research more accessible for public. For example, displaying what we learn from color science in physical space (see [Museum of Feelings] (https://www.themuseumoffeelings.com/), [Colortopia, Disney Epcot](http://www.icflorida.com/news/entertainment/attractions/colortopia-presented-glidden-creates-interactive-e/npRrZ/))   
 
 
